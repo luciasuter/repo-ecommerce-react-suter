@@ -1,13 +1,16 @@
-import logo from './logo.svg';
+import { Fragment } from 'react';
 import './App.css';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
+    <Fragment>
+      <NavBar />
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          
+          bienvenido a mi libreria artistica
         </p>
         <a
           className="App-link"
@@ -19,6 +22,7 @@ function App() {
         </a>
       </header>
     </div>
+    </Fragment>
   );
 }
 
