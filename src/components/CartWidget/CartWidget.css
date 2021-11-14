@@ -1,0 +1,10 @@
+.cart-icon {
+  color: blue;
+  font-size: 1.6rem;
+}
+
+.cart-icon:hover {
+  color: chocolate;
+  text-shadow: 1px 1px 4px rgba(128, 117, 93, 0.384);
+  transition-duration: 200ms;
+}

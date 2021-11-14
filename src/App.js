@@ -1,29 +1,21 @@
 import { Fragment } from 'react';
 import './App.css';
-import NavBar from './components/NavBar';
+
+// components
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+
 
 function App() {
   return (
     <Fragment>
       <NavBar />
-    <div className="App">
-      <header className="App-header">
-        <p>
-          
-          bienvenido a mi libreria artistica
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <ItemListContainer 
+      greeting="¡Bienvenido a mi libreria artistica!"
+      />
     </Fragment>
   );
 }
 
-export default App;
+export default App; 
+
