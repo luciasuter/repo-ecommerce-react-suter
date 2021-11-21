@@ -1,0 +1,113 @@
+/*.Counter {
+  width: inherit;
+  height: auto;
+  padding: 0.5em;
+}
+
+.Counter h4 {
+  font-size: 1.2rem;
+}
+
+.Counter span {
+  font-size: 0.7rem;
+  line-height: 1;
+  padding-bottom: 1rem;
+}
+
+.container_counter {
+  width: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.cantidad,
+.btn_restar,
+.btn_sumar {
+  height: 50px;
+}
+
+.btn_restar,
+.btn_sumar {
+  width: 50px;
+}
+
+.cantidad {
+  width: 50%;
+  text-align: center;
+}
+*/
+
+.Counter {
+  width: 280px;
+  height: 280px;
+  margin: 5em;
+  background-color: rgb(241, 241, 241);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.Counter span {
+  font-size: 0.8rem;
+  padding-top: 0.5rem;
+}
+.counter_txt {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(252, 252, 252);
+}
+
+.counter_txt h4 {
+  font-size: 1.2rem;
+  padding-bottom: 0.6rem;
+  text-align: center;
+}
+
+.counter_txt span {
+  font-size: 0.8rem;
+  line-height: 1;
+  text-align: justify;
+}
+
+.container_counter {
+  width: inherit;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+#btn_restar,
+#btn_sumar {
+  width: 2rem;
+  height: 2rem;
+}
+#btn_restar,
+#btn_sumar,
+#btn_agregar {
+  background-color: rgb(166, 224, 228);
+  color: white;
+}
+
+#btn_restar:disabled,
+#btn_sumar:disabled,
+#btn_agregar:disabled {
+  background-color: rgb(191, 216, 218);
+}
+
+#btn_agregar {
+  height: 2.5rem;
+}
+
+.container_cantidad {
+  width: 14rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(252, 252, 252);
+}
