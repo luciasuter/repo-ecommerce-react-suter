@@ -1,28 +1,29 @@
 {
-  "posts": [
-    {
-      "id": 0,
-      "producto": "pilot  Hi-Tec-C 03 gel pen",
-      "tipo": "lapicera",
-      "precio": "350",
-      "marca": "pilot",
-      "origen": "japon",
-      "stock": "20",
-      "foto": "https://www.adam-eshop.com/3249-large_default/stylo-gel-callibre-pilot-hi-tec-c.jpg"
-    },
-    {
-      "id": 1,
-      "producto": "pentel pocket brush pen",
-      "tipo": "pincel",
-      "precio": "650",
-      "marca": "pentel",
-      "origen": "japon",
-      "stock": "15",
-      "foto": "https://static2.jetpens.com/images/a/000/106/106218.jpg?ba=middle%2Ccenter&balph=3&blend64=aHR0cDovL3d3dy5qZXRwZW5zLmNvbS9pbWFnZXMvYXNzZXRzL3dhdGVybWFyazIucG5n&bm=difference&bs=inherit&mark64=aHR0cDovL3d3dy5qZXRwZW5zLmNvbS9pbWFnZXMvYXNzZXRzL3dhdGVybWFyazEucG5n&markalign=top%2Cright&markalpha=30&markscale=16&q=90&w=600&s=1078b3dd287371b53c03f79095a82ebf"
+    "posts": [
+      {
+        "id": 0,
+        "producto": "pilot  Hi-Tec-C 03 gel pen",
+        "tipo": "lapicera",
+        "precio": "350",
+        "marca": "pilot",
+        "origen": "japon",
+        "stock": 20,
+        "foto": "https://www.adam-eshop.com/3249-large_default/stylo-gel-callibre-pilot-hi-tec-c.jpg"
+      },
+      {
+        "id": 1,
+        "producto": "pentel pocket brush pen",
+        "tipo": "pincel",
+        "precio": "650",
+        "marca": "pentel",
+        "origen": "japon",
+        "stock": 15,
+        "foto": "https://static2.jetpens.com/images/a/000/106/106218.jpg?ba=middle%2Ccenter&balph=3&blend64=aHR0cDovL3d3dy5qZXRwZW5zLmNvbS9pbWFnZXMvYXNzZXRzL3dhdGVybWFyazIucG5n&bm=difference&bs=inherit&mark64=aHR0cDovL3d3dy5qZXRwZW5zLmNvbS9pbWFnZXMvYXNzZXRzL3dhdGVybWFyazEucG5n&markalign=top%2Cright&markalpha=30&markscale=16&q=90&w=600&s=1078b3dd287371b53c03f79095a82ebf"
+      }
+      
+    ],
+    "profile": {
+      "name": "typicode"
     }
-    
-  ],
-  "profile": {
-    "name": "typicode"
   }
-}
+
