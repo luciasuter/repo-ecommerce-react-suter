@@ -4,15 +4,25 @@
         "id": 0,
         "producto": "pilot  Hi-Tec-C 03 gel pen",
         "tipo": "lapicera",
-        "precio": "350",
+        "precio": 350,
         "marca": "pilot",
         "origen": "japon",
         "stock": 20,
         "foto": "https://www.adam-eshop.com/3249-large_default/stylo-gel-callibre-pilot-hi-tec-c.jpg"
+      },
+
+      {
+        "id": 1,
+        "producto": "pentel pocket brush pen",
+        "tipo": "pincel",
+        "precio": 650,
+        "marca": "pentel",
+        "origen": "japon",
+        "stock": 15,
+        "foto": "https://m.media-amazon.com/images/I/31vnF1JndeL._AC_SY580_.jpg"
       }
     ],
     "profile": {
       "name": "typicode"
     }
   }
-
