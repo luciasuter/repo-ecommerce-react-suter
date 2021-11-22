@@ -20,6 +20,17 @@
         "origen": "japon",
         "stock": 15,
         "foto": "https://m.media-amazon.com/images/I/31vnF1JndeL._AC_SY580_.jpg"
+      },
+        
+      {
+        "id": 1,
+        "producto": "Marcadores Kuretake zig",
+        "tipo": "pincel",
+        "precio": 650,
+        "marca": "kuretake",
+        "origen": "japon",
+        "stock": 0,
+        "foto": "https://m.media-amazon.com/images/I/31vnF1JndeL._AC_SY580_.jpg"
       }
     ],
     "profile": {
