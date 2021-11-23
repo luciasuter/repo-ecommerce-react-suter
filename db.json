@@ -2,7 +2,7 @@
 {
     "posts": 
     [
-      {"id": 0, "producto": "pilot  Hi-Tec-C 03 gel pen", "tipo": "lapicera de gek", "precio": 350, "marca": "Pilot", "origen": "japon", "stock": 20, "foto": "./src/components/assets/00.jpg"},
+      {"id": 0, "producto": "pilot  Hi-Tec-C 03 gel pen", "tipo": "lapicera de gek", "precio": 350, "marca": "Pilot", "origen": "japon", "stock": 20, "foto": ".../src/components/assets/00.jpg"},
       {"id": 1, "producto": "pentel pocket brush pen", "tipo": "marcador punta pincel", "precio": 3200, "marca": "Pentel", "origen": "japon", "stock": 15, "foto": "./src/components/assets/01.jpg"},  
       {"id": 2, "producto": "Kuretake Zig Cartoonist Manga Starter Set x 12", "tipo": "set de marcadores de alcohol", "precio": 7800, "marca": "Kuretake", "origen": "japon", "stock": 0, "foto": "./src/components/assets/02.webp"},
       {"id":3, "producto": "Mitsubishi Hi-Uni 22 Pencil Set", "tipo": "set de lapices graduados", "precio":8300 , "marca": "Uni", "origen": "japon", "stock":4, "foto": "./src/components/assets/03.jpg"},
