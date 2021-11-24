@@ -1,16 +1,16 @@
 import React, { Fragment } from 'react'
 import './ItemListContainer.css'
-import Counter from "../Counter/Counter"
 
-export default function ItemListContainer({greeting, greeting2}) {
+//import Counter from "../Counter/Counter"  desafio N5
+import ItemList from "../ItemList/ItemList"
+
+export default function ItemListContainer({greeting}) {
     return (
         <Fragment>
             <div className="greeting_msg">
             <span> {greeting} </span>
-            <span> {greeting2} </span>
         </div>
-        <Counter 
-        stock= "5" initial="1"/>
+        <ItemList/>
         </Fragment>
     )
 }

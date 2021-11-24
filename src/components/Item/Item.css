@@ -1,0 +1,46 @@
+.item_container {
+  width: 220px;
+  height: 380px;
+  background-color: rgb(182, 196, 196);
+  margin: 1em 1em 0em 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item_container h4 {
+  padding: 0.3rem;
+}
+
+.item_container ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.item_container ul li {
+  font-size: 0.8rem;
+}
+
+.item-img {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  background-color: red;
+  display: flex;
+  margin: 0.5em;
+}
+
+.item-img img {
+  height: 200px;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row;
+}
+
+.btns button,
+li button {
+  padding: 0.2em;
+  margin: 0.5em;
+}

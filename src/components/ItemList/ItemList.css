@@ -1,0 +1,15 @@
+.item-list {
+  margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-gap: 1em;
+  justify-items: center;
+  justify-content: center;
+  background-color: aquamarine;
+}
