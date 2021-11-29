@@ -1,23 +1,35 @@
 import { Fragment } from 'react';
 import './App.css';
 
-// components
-import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-//import Counter from "./components/Counter/Counter";
+// React Rounter Dom 6.0.2 (4)
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
+// views
+import Home from "./views/Home";
+import Catalogo from "./views/Catalogo";
+import Contact from "./views/Contact";
+import ItemDetailPage from "./views/ItemDetailPage";
+
+
+// Components
+import NavBar from './components/NavBar/NavBar';
 
 
 
 function App() {
   return (
-    <Fragment>
-      <NavBar />
-        <ItemListContainer 
-      greeting="¡Bienvenido a mi libreria artistica!"/>
-       
-       
-    </Fragment>
+    <Router>
+        <Fragment>
+          <NavBar />
+          <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Catalogo" element={<Catalogo />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/Producto/:id" element={<ItemDetailPage />} />
+        </Routes>
+      </Fragment>
+    </Router>
+    
   );
 }
 

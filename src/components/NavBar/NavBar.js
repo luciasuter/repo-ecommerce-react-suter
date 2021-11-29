@@ -1,31 +1,39 @@
 import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.css";
+import {NavLink} from 'react-router-dom'
+import {FiPenTool} from 'react-icons/fi'
 
 const NavBar = () => {
   return (
     <nav className="NavBar">
-      <h1 className="titulo"><a href="/">
-        Artistica Kunstler</a>
-      </h1>
+
+      <div className="container_titulo">
+      <FiPenTool size={20}/>
+        <NavLink to="/" className="titulo">Artistica Kunstler </NavLink>
+        
+        </div>
+
       <ul>
-        <li>
-          <a href="/">Home</a>
+      <li>
+          
         </li>
         <li>
-          <a href="/">Novedades</a>
+          <NavLink to="/" className="Link">Home</NavLink>
         </li>
         <li>
-          <a href="/">Catalogo</a>
+          <NavLink to="/Catalogo" className="Link">Catalogo</NavLink>
         </li>
         <li>
-          <a href="/">Contacto</a>
+          <NavLink to="/Contacto" className="Link">Contacto</NavLink>
         </li>
-        <li>
-          <CartWidget />
-        </li>
+        <li><CartWidget /></li>
       </ul>
+      
       
     </nav>
   );
 };
 export default NavBar;
+
+
+

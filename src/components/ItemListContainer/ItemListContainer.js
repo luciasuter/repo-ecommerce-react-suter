@@ -1,42 +1,28 @@
-import React, { Fragment } from 'react'
-import './ItemListContainer.css'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import ItemList from '../ItemList/ItemList';
 
-//import Counter from "../Counter/Counter"  desafio N5
-import ItemList from "../ItemList/ItemList"
+const ItemListContainer = () => {
+  const [items, setItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-export default function ItemListContainer({greeting}) {
-    return (
-        <Fragment>
-            <div className="greeting_msg">
-            <span> {greeting} </span>
-        </div>
-        <ItemList/>
-        </Fragment>
-    )
-}
-
-
-
-/* version funcion flecha 
-const  ItemListContainer = (props) => {
-    return (
-        <div className="greeting_msg">
-            <span> {props.greeting} </span>
-        </div>
-    )
-}
-
-export default ItemListContainer */ 
+  useEffect(() => {
+    axios.get(
+      'https://my-json-server.typicode.com/luciasuter/repo-ecommerce-react-suter/posts/')
+      .then((response) => response.data)
+      .then((items) => setItems(items));
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 2000);
+  }, []);
+  return (
+    <div className='item-list-container'>
+      {isLoading ? <span>cargando!!</span> : <ItemList data={items} />}
+      
+    </div>
+  );
+};
 
 
-/* version funcion flecha con props moderno
-const  ItemListContainer = ({greeting, greeting2}) => {
-    return (
-        <div className="greeting_msg">
-            <span> {greeting} </span>
-            <span> {greeting2} </span>
-        </div>
-    )
-}
+export default ItemListContainer;
 
-export default ItemListContainer */ 

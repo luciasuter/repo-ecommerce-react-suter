@@ -2,7 +2,7 @@
 {
     "posts": 
     [
-      {"id": 0, "producto": "pilot  Hi-Tec-C 03 gel pen", "tipo": "lapicera de gek", "precio": 350, "marca": "Pilot", "origen": "japon", "stock": 20, "foto": "https://i.imgur.com/oZNW9rX.jpg"},
+      {"id": 0, "producto": "pilot  Hi-Tec-C 03 gel pen", "tipo": "lapicera de gel", "precio": 350, "marca": "Pilot", "origen": "japon", "stock": 20, "foto": "https://i.imgur.com/oZNW9rX.jpg"},
       {"id": 1, "producto": "pentel pocket brush pen", "tipo": "marcador punta pincel", "precio": 3200, "marca": "Pentel", "origen": "japon", "stock": 15, "foto": "https://i.imgur.com/9gHT842.jpg"},  
       {"id": 2, "producto": "Kuretake Zig Cartoonist Manga Starter Set x 12", "tipo": "set de marcadores de alcohol", "precio": 7800, "marca": "Kuretake", "origen": "japon", "stock": 0, "foto": "https://i.imgur.com/nUTTzlK.jpg"},
       {"id":3, "producto": "Mitsubishi Hi-Uni 22 Pencil Set", "tipo": "set de lapices graduados", "precio":8300 , "marca": "Uni", "origen": "japon", "stock":4, "foto": "https://i.imgur.com/5g3Z0wR.png"},
@@ -10,7 +10,7 @@
       {"id":5, "producto": "Holbein Acryla Gouache 20ml set x 18 ", "tipo": "set de gouache acrilico", "precio":18000 , "marca": "Holbein", "origen": "japon", "stock":6, "foto": "https://i.imgur.com/BxgYxzh.jpg"},
       {"id":6, "producto": "Faber Castell Polychromos Colored Pencil Set x 120", "tipo": "set de lapices de colores", "precio":44000 , "marca": "Faber Castell", "origen": "alemania", "stock":2, "foto": "https://i.imgur.com/pU21oDe.jpg"},
       {"id":7, "producto": "Copic Markers 12-Piece Sketch Set, Cool Gray", "tipo": "set de marcadores de alcohol", "precio":22000 , "marca": "Copic", "origen": "japon", "stock":3, "foto": "https://i.imgur.com/phkz6Pw.jpg"},
-      {"id":8, "producto": "Arches Aquarelle Paper : Watercolour Paper Blocks : 300gsm Hot Press x 20", "tipo": "papel de acuarela profesional", "precio":22500 , "marca": "Arches", "origen": "francia", "stock":4, "foto": "https://i.imgur.com/jgSjU2C.jpg"}
+      {"id":8, "producto": "Arches Watercolour Paper Block 300gsm Hot Press x 20", "tipo": "papel de acuarela profesional", "precio":22500 , "marca": "Arches", "origen": "francia", "stock":4, "foto": "https://i.imgur.com/jgSjU2C.jpg"}
     ],
     "profile": {
       "name": "typicode"

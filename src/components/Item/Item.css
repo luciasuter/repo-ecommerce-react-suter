@@ -1,6 +1,6 @@
 .item_container {
-  width: 220px;
-  height: 380px;
+  width: 340px;
+  height: 370px;
   background-color: rgb(182, 196, 196);
   margin: 1em 1em 0em 1em;
   display: flex;
@@ -8,35 +8,37 @@
   align-items: center;
 }
 
-.item_container h4 {
-  padding: 0.3rem;
-}
-
-.item_container ul {
+.item_info {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
 }
 
-.item_container ul li {
-  font-size: 0.8rem;
+.item_titulo {
+  width: 260px;
+  height: 75px;
 }
 
 .item-img {
-  width: 200px;
-  height: 200px;
+  width: 210px;
+  height: 210px;
   overflow: hidden;
-  background-color: red;
+  background-color: rgb(255, 255, 255);
   display: flex;
   margin: 0.5em;
 }
 
 .item-img img {
-  height: 200px;
+  height: 210px;
 }
 
 .btns {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+.btns button {
+  font-size: 1rem;
 }
 
 .btns button,

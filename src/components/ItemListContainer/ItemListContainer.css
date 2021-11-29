@@ -1,9 +1,0 @@
-.greeting_msg {
-  color: chocolate;
-  width: 100%;
-  position: absolute;
-  text-align: center;
-  top: 60px;
-  display: flex;
-  flex-direction: column;
-}

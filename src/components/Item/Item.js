@@ -1,34 +1,43 @@
 import React from 'react'
 import "./Item.css"
 
-import "../assets/00.jpg"
 
 export let stock;
+export let valor_stock = false;
+export let valor_agregar = false;
+
 const Item = ({data, img}) => {
 
     if (data.stock > 0){
         stock = "in stock";
+        valor_stock = false;
+        valor_agregar = false;
     }
     else if (data.stock <= 0){
         stock = "not in stock"
+        valor_stock = true;
+        valor_agregar = true;
     }
     return (
-        <div className="item_container">
-            
-            <h4>{data.producto}</h4>
-            <ul>
-                <li>marca: {data.marca}</li>
-                <li>origen: {data.origen}</li>
-                <li><button>{stock}</button></li>  
-            </ul>
-            <div  className ="item-img">
-            <img  src={img} alt='imagen-producto'></img>
+        
+            <div className="item_container">
+                    <div className="item_titulo">
+                        <h4>{data.producto}</h4>
+                    </div>
+                    <div className="item_info">
+                        <div  className ="item-img">
+                            <img  src={img} alt={`imagen-producto-${data.id}`}/>
+                        </div>
+                        <div className="btns">
+                            <button>${data.precio}</button>
+                            <button disabled={valor_stock}>{stock}</button>
+                            <button disabled={valor_agregar}>agregar</button>
+                            
+                        </div>
+                    </div>
+                    
             </div>
-            <div className="btns">
-            <button>${data.precio}</button>
-            <button>ver mas informacion</button>
-            </div>
-        </div>
+        
     )
 }
 
