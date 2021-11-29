@@ -3,6 +3,7 @@ import axios from 'axios';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import {useParams} from 'react-router-dom'
 import './ItemDetailContainer.css'
+import Loading from '../Loading/Loading'
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
@@ -22,7 +23,7 @@ const ItemDetailContainer = () => {
     return (
         <Fragment>
       <div className="ItemDetailContainer">
-      {itemIsLoading ? <span>cargando elemento!!</span> :<ItemDetail item={item}/>}
+      {itemIsLoading ? <Loading/> :<ItemDetail item={item}/>}
       </div>
     </Fragment>
     )

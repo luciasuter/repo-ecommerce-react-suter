@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Item.css"
-
+import { Link } from "react-router-dom";
 
 export let stock;
 export let valor_stock = false;
@@ -32,7 +32,7 @@ const Item = ({data, img}) => {
                             <button>${data.precio}</button>
                             <button disabled={valor_stock}>{stock}</button>
                             <button disabled={valor_agregar}>agregar</button>
-                            
+                            <Link to={`/Producto/${data.id}`}><button>ver mas info</button></Link>
                         </div>
                     </div>
                     

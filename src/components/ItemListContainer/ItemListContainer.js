@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ItemList from '../ItemList/ItemList';
+import Loading from '../Loading/Loading'
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
@@ -17,7 +18,7 @@ const ItemListContainer = () => {
   }, []);
   return (
     <div className='item-list-container'>
-      {isLoading ? <span>cargando!!</span> : <ItemList data={items} />}
+      {isLoading ? <Loading/> : <ItemList data={items} />}
       
     </div>
   );
