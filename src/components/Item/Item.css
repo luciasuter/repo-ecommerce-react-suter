@@ -1,11 +1,12 @@
 .item_container {
   width: 340px;
-  height: 370px;
-  background-color: rgb(182, 196, 196);
+  height: 300px;
+  background-color: rgb(241, 241, 241);
   margin: 1em 1em 0em 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .item_info {
@@ -16,7 +17,8 @@
 
 .item_titulo {
   width: 260px;
-  height: 75px;
+  height: 45px;
+  margin-top: 0.5em;
 }
 
 .item-img {
@@ -25,16 +27,29 @@
   overflow: hidden;
   background-color: rgb(255, 255, 255);
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0.5em;
+  border: dotted black 1px;
 }
 
 .item-img img {
-  height: 210px;
+  height: 180px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.item-img img:hover {
+  transform: scale(1.1);
 }
 
 .btns {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.item_precio {
+  font-weight: 800;
 }
 
 .btns button {

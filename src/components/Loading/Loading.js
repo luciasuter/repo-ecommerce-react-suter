@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react'
 import {Loader} from 'semantic-ui-react'
+import './Loading.css'
 
 const Loading = () => {
     return (

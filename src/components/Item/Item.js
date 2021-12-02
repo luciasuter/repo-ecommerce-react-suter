@@ -29,7 +29,7 @@ const Item = ({data, img}) => {
                             <img  src={img} alt={`imagen-producto-${data.id}`}/>
                         </div>
                         <div className="btns">
-                            <button>${data.precio}</button>
+                            <span className="item_precio">${data.precio}</span>
                             <button disabled={valor_stock}>{stock}</button>
                             <button disabled={valor_agregar}>agregar</button>
                             <Link to={`/Producto/${data.id}`}><button>ver mas info</button></Link>

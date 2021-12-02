@@ -16,7 +16,6 @@ const ItemDetail = ({item}) => {
         valor = true;
         valor_agregar = true;
         
-
     }
 
     return (
@@ -27,18 +26,17 @@ const ItemDetail = ({item}) => {
                 </div>
             </div>
             <div className="txt_container">
-                <h3>{item.producto}</h3>
-                <span>${item.precio}</span>
-                            
-                            <ul className="txt_detail">
-                                <li>producto: {item.tipo}</li>
-                            <li>marca: {item.marca}</li>
-                            <li>origen: {item.origen}</li>
-                            </ul>
-                            <div className="txt_btns">
-                            <button className="btn_stock" disabled={valor}>{stock}</button>
-                            <button disabled={valor_agregar}>agregar</button>
-                            </div>
+                <h3 className="detail_titulo">{item.producto}</h3>        
+                <ul className="txt_detail">
+                    <li>producto: {item.tipo}</li>
+                    <li>marca: {item.marca}</li>
+                    <li>origen: {item.origen}</li>
+                </ul>
+                <div className="txt_btns">
+                    <span class="detail_precio">${item.precio}</span>
+                    <button className="btn_stock" disabled={valor}>{stock}</button>
+                    <button disabled={valor_agregar}>agregar</button>
+                </div>
             </div>
             
             

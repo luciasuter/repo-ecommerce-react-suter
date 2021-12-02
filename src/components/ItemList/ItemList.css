@@ -3,8 +3,9 @@
   padding: 2em;
   display: grid;
   grid-template-columns: 30% 30% 30%;
+  grid-template-areas: "one two three";
   grid-gap: 1em;
-  justify-items: center;
+  align-items: center;
   justify-content: center;
-  background-color: aquamarine;
+  background-color: rgb(216, 216, 216);
 }

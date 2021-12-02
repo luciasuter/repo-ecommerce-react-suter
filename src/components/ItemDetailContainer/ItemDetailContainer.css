@@ -1,8 +1,10 @@
 .ItemDetailContainer {
-  margin: 5em 5em 0 5em;
+  margin: 5em 5em 5em 5em;
   padding: 2em;
-  justify-items: center;
+  align-items: center;
   justify-content: center;
-  background-color: rgb(186, 214, 214);
+  background-color: rgb(216, 216, 216);
+  position: fixed;
   height: 70vh;
+  width: 80vw;
 }
