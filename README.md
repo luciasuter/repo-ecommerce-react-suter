@@ -1,3 +1,6 @@
+Este proyecto fue creado para el curso de REACT JS de coderhouse. El tema que elegi para el mismo fue un e-commerce de una librería artística integral, con productos importados no tan fáciles de adquirir. 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
