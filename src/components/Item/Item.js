@@ -4,19 +4,19 @@ import { Link } from "react-router-dom";
 
 export let stock;
 export let valor_stock = false;
-export let valor_agregar = false;
+
 
 const Item = ({data, img}) => {
 
     if (data.stock > 0){
         stock = "in stock";
         valor_stock = false;
-        valor_agregar = false;
+        
     }
     else if (data.stock <= 0){
         stock = "not in stock"
         valor_stock = true;
-        valor_agregar = true;
+        
     }
     return (
         
@@ -31,7 +31,6 @@ const Item = ({data, img}) => {
                         <div className="btns">
                             <span className="item_precio">${data.precio}</span>
                             <button disabled={valor_stock}>{stock}</button>
-                            <button disabled={valor_agregar}>agregar</button>
                             <Link to={`/Producto/${data.id}`}><button>ver mas info</button></Link>
                         </div>
                     </div>

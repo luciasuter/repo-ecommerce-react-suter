@@ -1,22 +1,28 @@
 import React from 'react'
 import './ItemDetail.css'
 
+import { Link } from "react-router-dom";
+
+
+import Counter from '../Counter/Counter'
+
 export let stock;
 export let valor = false;
-export let valor_agregar = false;
+
 
 const ItemDetail = ({item}) => {
+
     if (item.stock > 0){
         stock = "in stock";
         valor = false;
-        valor_agregar = false;
     }
     else if (item.stock <= 0){
         stock = "not in stock"
         valor = true;
-        valor_agregar = true;
         
     }
+
+    
 
     return (
         <div className={`item_id_${item.id} item_detail_container`}>
@@ -33,11 +39,17 @@ const ItemDetail = ({item}) => {
                     <li>origen: {item.origen}</li>
                 </ul>
                 <div className="txt_btns">
-                    <span class="detail_precio">${item.precio}</span>
+                    <span className="detail_precio">${item.precio}</span>
                     <button className="btn_stock" disabled={valor}>{stock}</button>
-                    <button disabled={valor_agregar}>agregar</button>
+                </div>
+                <div className="counter_cont">
+                {item.stock === 0 ? null : <Counter stock={item.stock} initial="0"/>}
+                {item.stock === 0 ? null : <Link to="/Cart"><button id="btn_terminar">terminar compra</button></Link>}
+                <Link to="/Catalogo"><button id="btn_counter_volver">volver al catalogo</button></Link>
+                
                 </div>
             </div>
+            
             
             
         </div>

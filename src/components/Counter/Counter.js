@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import "./Counter.css";
 
+import {CartState} from '../../CartContext'
+
+
  function Counter ({stock, initial, onAdd}){
     let [cantidad, setCantidad] = useState(parseInt(initial));
     let [agregados, setAgregados] = useState(0)
@@ -36,9 +39,13 @@ import "./Counter.css";
     function agregarArticulos(){
       onAdd = agregados+cantidad;
       
-      if (onAdd < parseInt(stock)){
+      /*AGREGO ARTICULOS */ 
+      if (onAdd <= parseInt(stock)){
         document.getElementById("btn_agregar").disabled = false;
         setAgregados (onAdd)
+        alert(`¡agregaste ${cantidad} articulos nuevos a tu carrito!\ncantidad total de articulos agregados: ${onAdd} `)
+        CartState.push('hello world')
+        console.log(CartState)
       }
 
       if (onAdd === parseInt(stock)){
@@ -54,16 +61,14 @@ import "./Counter.css";
         document.getElementById("btn_agregar").disabled = true;
         alert("no hay suficiente stock")
         document.getElementById("btn_agregar").disabled = false;
-      } 
-      
+      }
+    
     }
+
+
 
     return (
         <div className="Counter">
-          <div className="counter_txt">
-            <h4>Articulo N 1</h4>
-            <span>descripcion del articulo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </span>
-          </div>
           <div className="container_counter">
             <button id="btn_sumar" onClick={Sumar}>+</button>
             <div className="container_cantidad">
@@ -72,7 +77,11 @@ import "./Counter.css";
             <button id="btn_restar" onClick={Restar}>-</button>
           </div>
           <button id="btn_agregar" onClick={agregarArticulos}>agregar</button>
-          <span>cantidad de articulos agregados: {agregados}</span>
+          <div className="container_counter_txt">
+          <span>cantidad agregada: {agregados}</span> 
+          <span>stock: {stock}</span>
+          
+          </div>
         </div>
     )
 }

@@ -31,6 +31,7 @@
   display: flex;
   flex-direction: column;
   font-size: 16px;
+  align-items: flex-start;
 }
 
 .detail_titulo {
@@ -49,4 +50,13 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  width: inherit;
+}
+
+.detail_precio {
+  padding-right: 1rem;
+}
+
+#btn_terminar {
+  margin-right: 0.5rem;
 }

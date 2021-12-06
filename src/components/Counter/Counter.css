@@ -40,8 +40,7 @@
 
 .Counter {
   width: 280px;
-  height: 280px;
-  margin: 5em;
+  margin: 1em 1em 1em 0;
   background-color: rgb(241, 241, 241);
   display: flex;
   flex-direction: column;
@@ -50,25 +49,6 @@
 
 .Counter span {
   font-size: 0.8rem;
-  padding-top: 0.5rem;
-}
-.counter_txt {
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(252, 252, 252);
-}
-
-.counter_txt h4 {
-  font-size: 1.2rem;
-  padding-bottom: 0.6rem;
-  text-align: center;
-}
-
-.counter_txt span {
-  font-size: 0.8rem;
-  line-height: 1;
-  text-align: justify;
 }
 
 .container_counter {
@@ -88,7 +68,9 @@
 }
 #btn_restar,
 #btn_sumar,
-#btn_agregar {
+#btn_agregar,
+#btn_terminar,
+#btn_counter_volver {
   background-color: rgb(166, 224, 228);
   color: white;
 }
@@ -99,8 +81,15 @@
   background-color: rgb(191, 216, 218);
 }
 
-#btn_agregar {
+#btn_agregar,
+#btn_terminar,
+#btn_counter_volver {
   height: 2.5rem;
+}
+
+#btn_terminar,
+#btn_counter_volver {
+  margin-top: 0.2em;
 }
 
 .container_cantidad {
@@ -110,4 +99,10 @@
   align-items: center;
   justify-content: center;
   background-color: rgb(252, 252, 252);
+}
+
+.container_counter_txt {
+  margin-top: 0.5em;
+  display: flex;
+  flex-direction: column;
 }

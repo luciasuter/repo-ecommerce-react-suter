@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#otros
+/src/components/CartDetail 
+/src/components/CartProduct
+CartContext.js

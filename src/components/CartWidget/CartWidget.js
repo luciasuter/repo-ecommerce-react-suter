@@ -5,7 +5,7 @@ import { BsMinecartLoaded } from 'react-icons/bs';
 export default function CartWidget() {
     return (
         <div className='cart-icon'>
-            <a href="/"><BsMinecartLoaded /></a>
+            <a href="/Cart"><BsMinecartLoaded /></a>
         </div>
     )
 }
