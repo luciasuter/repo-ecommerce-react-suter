@@ -60,3 +60,8 @@
 #btn_terminar {
   margin-right: 0.5rem;
 }
+
+.btns_bottom{
+  display: flex;
+  flex-direction: row;
+}

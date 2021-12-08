@@ -1,7 +1,25 @@
 import React, { useState } from 'react'
 import "./Counter.css";
 
+import { Link } from "react-router-dom";
+
 import {CartState} from '../../CartContext'
+
+import {datos} from '../ItemDetail/ItemDetail'
+
+export let cantidad;
+
+
+class ItemCounter{
+  constructor(product_id, product_name, product_quantity, product_price, product_total_price){
+      this.id = product_id;
+      this.name = product_name;
+      this.quantity = product_quantity;
+      this.price = product_price;
+      this.totalPrice = product_total_price;
+  }
+}
+
 
 
  function Counter ({stock, initial, onAdd}){
@@ -43,9 +61,11 @@ import {CartState} from '../../CartContext'
       if (onAdd <= parseInt(stock)){
         document.getElementById("btn_agregar").disabled = false;
         setAgregados (onAdd)
-        alert(`¡agregaste ${cantidad} articulos nuevos a tu carrito!\ncantidad total de articulos agregados: ${onAdd} `)
-        CartState.push('hello world')
+        const addItem = new ItemCounter(datos.id, datos.nombre, onAdd, datos.precio, (onAdd * datos.precio) )
+        console.log(cantidad)
+        CartState.push(addItem)
         console.log(CartState)
+        alert(`¡agregaste ${cantidad} articulos nuevos a tu carrito!`)
       }
 
       if (onAdd === parseInt(stock)){
@@ -80,6 +100,11 @@ import {CartState} from '../../CartContext'
           <div className="container_counter_txt">
           <span>cantidad agregada: {agregados}</span> 
           <span>stock: {stock}</span>
+
+          <div className="btns_bottom">
+            {stock === 0 || agregados <= 0 ? null : <Link to="/Cart"><button id="btn_terminar">terminar compra</button></Link>}
+            <Link to="/Catalogo"><button id="btn_counter_volver">volver al catalogo</button></Link>
+          </div>
           
           </div>
         </div>

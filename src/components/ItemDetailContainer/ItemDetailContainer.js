@@ -23,7 +23,7 @@ const ItemDetailContainer = () => {
     return (
         <Fragment>
       <div className="ItemDetailContainer">
-      {itemIsLoading ? <Loading/> :<ItemDetail item={item}/>}
+      {itemIsLoading ? <Loading/> :<ItemDetail data={item}/>}
       </div>
     </Fragment>
     )
