@@ -1,16 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import "./Counter.css";
 
 import { Link } from "react-router-dom";
 
-import {CartState} from '../../CartContext'
+import {CartContext} from '../../CartContext'
 
 import {datos} from '../ItemDetail/ItemDetail'
 
-export let cantidad;
+export let fx_onAdd;
+export let addItem;
 
 
-class ItemCounter{
+
+export class ItemCounter{
   constructor(product_id, product_name, product_quantity, product_price, product_total_price){
       this.id = product_id;
       this.name = product_name;
@@ -25,6 +27,7 @@ class ItemCounter{
  function Counter ({stock, initial, onAdd}){
     let [cantidad, setCantidad] = useState(parseInt(initial));
     let [agregados, setAgregados] = useState(0)
+    let [cart, setCart, AddProduct] = useContext(CartContext)
     
     function Sumar (){
       
@@ -56,16 +59,16 @@ class ItemCounter{
 
     function agregarArticulos(){
       onAdd = agregados+cantidad;
+      fx_onAdd = onAdd;
+
       
       /*AGREGO ARTICULOS */ 
       if (onAdd <= parseInt(stock)){
         document.getElementById("btn_agregar").disabled = false;
         setAgregados (onAdd)
-        const addItem = new ItemCounter(datos.id, datos.nombre, onAdd, datos.precio, (onAdd * datos.precio) )
-        console.log(cantidad)
-        CartState.push(addItem)
-        console.log(CartState)
-        alert(`¡agregaste ${cantidad} articulos nuevos a tu carrito!`)
+        addItem = new ItemCounter(datos.id, datos.nombre, onAdd, datos.precio, (onAdd * datos.precio))
+        AddProduct(addItem)
+
       }
 
       if (onAdd === parseInt(stock)){

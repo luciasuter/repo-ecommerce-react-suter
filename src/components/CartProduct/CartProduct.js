@@ -9,7 +9,7 @@ const CartProduct = ({data}) => {
                 <li>product name: {data.name}</li>
                 <li>product price x 1: ${data.price}</li>
                 <li>product quantity: {data.quantity}</li>
-                <li>product total price: ${data.totalPrice}</li>
+                <li>total product price: ${data.totalPrice}</li>
             </ul>
         </div>
     )

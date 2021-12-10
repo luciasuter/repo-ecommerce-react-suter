@@ -4,6 +4,8 @@ import { CartContext } from '../../CartContext'
 import CartProduct from '../CartProduct/CartProduct'
 
 const CartDetail = () => {
+
+
     const [products, setProducts] = useContext(CartContext);
     return (
         <div className="CartDetail">

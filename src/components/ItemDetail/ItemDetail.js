@@ -1,9 +1,6 @@
 import React from 'react'
 import './ItemDetail.css'
 
-import { Link } from "react-router-dom";
-
-
 import Counter from '../Counter/Counter'
 
 export let stock;
@@ -13,6 +10,7 @@ export let datos;
 
 
 const ItemDetail = ({data}) => {
+
 
     if (data.stock > 0){
         stock = "in stock";
@@ -31,7 +29,9 @@ const ItemDetail = ({data}) => {
     };
 
     return (
+        
         <div className={`item_id_${data.id} item_detail_container`}>
+            
             <div className="img_container">
                 <div className="item_detail_img">
                 <img src={`${data.foto}`} alt={`imagen-producto-${data.id}`}/>
@@ -49,7 +49,7 @@ const ItemDetail = ({data}) => {
                     <button className="btn_stock" disabled={valor}>{stock}</button>
                 </div>
                 <div className="counter_cont">
-                    {data.stock === 0 ? <Link to="/Catalogo"><button id="btn_counter_volver">volver al catalogo</button></Link> : <Counter stock={data.stock} initial="0"/>}
+                    {data.stock === 0 ? null : <Counter stock={data.stock} initial="0"/>}
                     
                 </div>
             </div>
