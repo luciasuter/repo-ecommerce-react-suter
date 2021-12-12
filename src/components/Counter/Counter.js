@@ -2,32 +2,15 @@ import React, { useState, useContext } from 'react'
 import "./Counter.css";
 
 import { Link } from "react-router-dom";
-
 import {CartContext} from '../../CartContext'
-
-import {datos} from '../ItemDetail/ItemDetail'
-
-export let fx_onAdd;
-export let addItem;
-
-
-
-export class ItemCounter{
-  constructor(product_id, product_name, product_quantity, product_price, product_total_price){
-      this.id = product_id;
-      this.name = product_name;
-      this.quantity = product_quantity;
-      this.price = product_price;
-      this.totalPrice = product_total_price;
-  }
-}
-
-
+import {Item} from '../ItemDetail/ItemDetail'
+export let AddItem;
 
  function Counter ({stock, initial, onAdd}){
     let [cantidad, setCantidad] = useState(parseInt(initial));
     let [agregados, setAgregados] = useState(0)
-    let [cart, setCart, AddProduct] = useContext(CartContext)
+    const [cart, setCart, AddProduct] = useContext(CartContext)
+    
     
     function Sumar (){
       
@@ -59,28 +42,22 @@ export class ItemCounter{
 
     function agregarArticulos(){
       onAdd = agregados+cantidad;
-      fx_onAdd = onAdd;
-
-      
-      /*AGREGO ARTICULOS */ 
-      if (onAdd <= parseInt(stock)){
+      setAgregados (onAdd)  
+      /*AGREGO ARTICULOS*/
+      if (parseInt(onAdd) <= parseInt(stock)){
         document.getElementById("btn_agregar").disabled = false;
-        setAgregados (onAdd)
-        addItem = new ItemCounter(datos.id, datos.nombre, onAdd, datos.precio, (onAdd * datos.precio))
-        AddProduct(addItem)
-
+        AddProduct(Item.id, Item.nombre, Item.precio, cantidad, (Item.precio * cantidad))
       }
 
-      if (onAdd === parseInt(stock)){
+      if (parseInt(onAdd) === parseInt(stock)){
         setAgregados (onAdd)
         document.getElementById("btn_agregar").disabled = true;
         document.getElementById("btn_agregar").innerHTML = "limite de stock";
         document.getElementById("btn_sumar").disabled = true;
         document.getElementById("btn_restar").disabled = true;
-    
       }
 
-      if (onAdd > parseInt(stock)){
+      if (parseInt(onAdd) > parseInt(stock)){
         document.getElementById("btn_agregar").disabled = true;
         alert("no hay suficiente stock")
         document.getElementById("btn_agregar").disabled = false;

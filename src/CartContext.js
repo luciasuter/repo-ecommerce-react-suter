@@ -1,51 +1,48 @@
 import React, {createContext, useState} from 'react'
-import { addItem } from './components/Counter/Counter';
-import {datos} from './components/ItemDetail/ItemDetail'
-import ItemCounter from './components/Counter/Counter'
 
 export const CartContext = createContext();
-export const CartState = []
-let cantidadAnterior;
-
-
-const AddProduct = () => {
-	console.log(addItem)
-    console.log(CartState)
-    const array = CartState.filter(item => parseInt(item.id) === parseInt(addItem.id))
-    if (array.length === 0){
-        console.log("vacio")
-        CartState.push(addItem)
-        console.log("no + vacio")
-        console.log(CartState)
-      }
-
-    if (array.length !== 0){
-      console.log("no esta vacio")
-      let ittem = array.find(item => item.id === addItem.id)
-      cantidadAnterior = Object.values(ittem)[2]
-      for (let i = CartState.length - 1; i >= 0; --i) {
-          if (CartState[i].id === addItem.id) {
-          CartState.splice(i,1);
-          }
-      }
-      const addItemAgain = new ItemCounter(datos.id, datos.nombre, (cantidadAnterior + addItem.quantity), datos.precio, ((cantidadAnterior + addItem.quantity) * datos.precio))
-        CartState.push(addItemAgain)
-    }
-}
-
-const ClearCart = () => {
-    CartState.length = 0;
-}
-
 
 export const CartProvider = ({children}) =>{
-const [cart, setCart] = useState(CartState);
 
+    const [cart, setCart] = useState([]);
+
+    const AddProduct = (id, name, price, quantity, total_price  ) =>{
+        const AddItem = {id: id, nombre: name, precio_unidad: price, cant: quantity, precio_total: total_price}
+        FilterProduct(AddItem)
+    }
+
+
+    const FilterProduct = (item) =>{
+        const CartTest = cart.filter(product => product.id === item.id)
+        if (CartTest.length === 0){
+            console.log("vacio")
+            setCart(prevItems => [...prevItems, item]);
+            console.log("no + vacio")
+        }
+    
+        if (CartTest.length !== 0){
+            console.log("no esta vacio")
+            let FindItem = CartTest.find(product => product.id === item.id)
+            const cantidadAnterior = Object.values(FindItem)[3]
+            console.log(cantidadAnterior)
+            for (let i = cart.length - 1; i >= 0; --i) {
+                if (cart[i].id === item.id) {
+                cart.splice(i,1)}
+            }
+            let AddItemAgain = {id: item.id, nombre: item.nombre, precio_unidad: item.precio_unidad, cant: (item.cant + cantidadAnterior), precio_total: (item.precio_unidad * (item.cant + cantidadAnterior))}
+            console.log(AddItemAgain)
+            setCart(prevItems => [...prevItems, AddItemAgain]);
+        }
+    };
+
+    
+    
     return (
-        <CartContext.Provider value={[cart, setCart, AddProduct, ClearCart]}>
+        <CartContext.Provider value={[cart, setCart, AddProduct, FilterProduct]}>
             {children}
         </CartContext.Provider>
     );
 
 };
+
 

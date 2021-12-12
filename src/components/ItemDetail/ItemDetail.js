@@ -6,7 +6,7 @@ import Counter from '../Counter/Counter'
 export let stock;
 export let valor = false;
 
-export let datos;
+export let Item;
 
 
 const ItemDetail = ({data}) => {
@@ -22,7 +22,7 @@ const ItemDetail = ({data}) => {
         
     }
 
-    datos ={
+    Item ={
         id: data.id,
         nombre: data.producto,
         precio: data.precio

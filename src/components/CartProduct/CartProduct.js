@@ -5,11 +5,9 @@ const CartProduct = ({data}) => {
     return (
         <div className={`Product_${data.id} cart_container`}>
             <ul>
-                <li>product id: {data.id}</li>
-                <li>product name: {data.name}</li>
-                <li>product price x 1: ${data.price}</li>
-                <li>product quantity: {data.quantity}</li>
-                <li>total product price: ${data.totalPrice}</li>
+                <li>product name: {data.nombre}</li>
+                <li>product price x 1: ${data.precio_unidad}</li>
+                <li>product quantity: {data.cant}</li>
             </ul>
         </div>
     )
