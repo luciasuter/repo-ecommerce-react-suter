@@ -11,7 +11,6 @@ export const CartProvider = ({children}) =>{
         FilterProduct(AddItem)
     }
 
-
     const FilterProduct = (item) =>{
         const CartTest = cart.filter(product => product.id === item.id)
         if (CartTest.length === 0){
@@ -34,8 +33,6 @@ export const CartProvider = ({children}) =>{
             setCart(prevItems => [...prevItems, AddItemAgain]);
         }
     };
-
-    
     
     return (
         <CartContext.Provider value={[cart, setCart, AddProduct, FilterProduct]}>

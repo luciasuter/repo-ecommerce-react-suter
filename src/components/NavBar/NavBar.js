@@ -1,9 +1,12 @@
+import React, {useContext} from 'react'
 import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.css";
 import {NavLink} from 'react-router-dom'
 import {FiPenTool} from 'react-icons/fi'
+import { CartContext } from "../../CartContext";
 
 const NavBar = () => {
+  const [cart] = useContext(CartContext)
   return (
     <nav className="NavBar">
 
@@ -26,7 +29,8 @@ const NavBar = () => {
         <li>
           <NavLink to="/Contacto" className="Link">Contacto</NavLink>
         </li>
-        <li><NavLink to="/Cart"><CartWidget /></NavLink></li>
+        {cart.length === 0 ? null : <li><NavLink to="/Cart"><CartWidget /></NavLink></li>}
+        
       </ul>
       
       
