@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment} from 'react';
 import './App.css';
 
 // React Rounter Dom 6.0.2 (4)
@@ -19,7 +19,10 @@ import NavBar from './components/NavBar/NavBar';
 import {CartProvider} from './CartContext'
 
 
+
+
 function App() {
+
   return (
     <CartProvider>
       <Router>

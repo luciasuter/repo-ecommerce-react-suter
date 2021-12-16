@@ -19,7 +19,7 @@
 }
 
 .item_detail_img img {
-  height: 60%;
+  height: 40%;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -61,7 +61,7 @@
   margin-right: 0.5rem;
 }
 
-.btns_bottom{
+.btns_bottom {
   display: flex;
   flex-direction: row;
 }

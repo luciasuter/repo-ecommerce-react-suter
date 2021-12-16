@@ -34,7 +34,7 @@ const ItemDetail = ({data}) => {
             
             <div className="img_container">
                 <div className="item_detail_img">
-                <img src={`${data.foto}`} alt={`imagen-producto-${data.id}`}/>
+                <img src={`${data.imagen}`} alt={`imagen-producto-${data.id}`}/>
                 </div>
             </div>
             <div className="txt_container">

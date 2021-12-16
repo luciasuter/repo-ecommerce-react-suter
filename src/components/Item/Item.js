@@ -6,7 +6,7 @@ export let stock;
 export let valor_stock = false;
 
 
-const Item = ({data, img}) => {
+const Item = ({data}) => {
 
     if (data.stock > 0){
         stock = "in stock";
@@ -26,7 +26,7 @@ const Item = ({data, img}) => {
                     </div>
                     <div className="item_info">
                         <div  className ="item-img">
-                            <img  src={img} alt={`imagen-producto-${data.id}`}/>
+                            <img  src={data.imagen} alt={`imagen-producto-${data.id}`}/>
                         </div>
                         <div className="btns">
                             <span className="item_precio">${data.precio}</span>
