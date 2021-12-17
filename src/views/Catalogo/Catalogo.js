@@ -1,13 +1,14 @@
 import React from 'react'
+import './Catalogo.css'
 
 import ItemListContainer from '../../components/ItemListContainer/ItemListContainer'
-import CategoryNavbar from '../../components/CategoryNavbar/CategoryNavbar'
+import MarcaNavbar from '../../components/MarcaNavbar/MarcaNavbar'
 
 const Catalogo = () => {
     
     return (
-        <div>
-            <CategoryNavbar/>
+        <div className='Catalogo'>
+            <MarcaNavbar/>
             <ItemListContainer />
         </div>
     )

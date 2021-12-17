@@ -5,7 +5,7 @@ import './ItemDetailContainer.css'
 import Loading from '../Loading/Loading'
 
 import {db} from '../../firebase/firebaseConfig'
-import { collection, query, where, getDocs } from "firebase/firestore";
+import { collection, query, getDocs } from "firebase/firestore";
 
 
 const ItemDetailContainer = () => {
@@ -35,7 +35,7 @@ const ItemDetailContainer = () => {
       setTimeout(() => {
         setItemIsLoading(false);
       }, 2000);
-  }, []); 
+  }, [paramsID]); 
 
     return (
       <Fragment>

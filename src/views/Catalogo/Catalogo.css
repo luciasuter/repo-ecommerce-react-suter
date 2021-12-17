@@ -1,0 +1,6 @@
+.Catalogo {
+  margin-top: 1em;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+}
