@@ -23,7 +23,7 @@ const TypeContainer = () => {
         const docs = []
         const querySnapshot = await getDocs(q);
         querySnapshot.forEach((doc) => {
-          docs.push({...doc.data(), marca:doc.marca});
+          docs.push({...doc.data(), id: doc.id});
         });
         setProductsData(docs);
       };

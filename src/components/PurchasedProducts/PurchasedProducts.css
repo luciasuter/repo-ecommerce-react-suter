@@ -1,0 +1,7 @@
+.PurchasedProducts {
+  background-color: rgb(240, 240, 240);
+  margin: 1.2em;
+  border: 1px dotted rgb(150, 150, 150);
+  width: 400px;
+  font-size: 0.8rem;
+}

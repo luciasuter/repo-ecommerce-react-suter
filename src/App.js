@@ -11,6 +11,7 @@ import Contact from "./views/Contact/Contact";
 import ItemDetailPage from "./views/ItemDetailPage/ItemDetailPage";
 import Cart from "./views/Cart/Cart";
 import Tipo from "./views/Categories/Tipo/Tipo"
+import Purchase from './views/Purchase/Purchase';
 
 // views/Marcas
 import Otras from "./views/Categories/Marca/Otras/Otras";
@@ -48,6 +49,7 @@ function App() {
             <Route path="/Marca/Otras" element={<Otras />} />
             <Route path="/Marca/:marca" element={<Tipo />} />
             <Route path="/Cart" element={<Cart />} />
+            <Route path="/Purchase" element={<Purchase />} />
 
           </Routes>
         </Fragment>
@@ -59,10 +61,3 @@ function App() {
 
 export default App; 
 
-/*            <Route path="/Marca/Copic" element={<Copic />} />
-            <Route path="/Marca/Otras" element={<Otras />} />
-            <Route path="/Marca/Kuretake" element={< Kuretake />} />
-            <Route path="/Marca/Moleskine" element={<Moleskine />} />
-            <Route path="/Marca/Pilot" element={<Pilot />} />
-            <Route path="/Marca/Uniball" element={<Uniball />} />
-            <Route path="/Marca/WinsorNewton" element={<WinsorNewton />} />*/

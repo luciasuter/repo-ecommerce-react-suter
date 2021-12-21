@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 
 import Loading from '../Loading/Loading'
 import './ItemList.css'
-import { Link } from "react-router-dom";
+
 
 // firebase
 import {db} from '../../firebase/firebaseConfig'
-import { collection, query, where, getDocs } from "firebase/firestore";
+import { collection, query, getDocs } from "firebase/firestore";
 
 import Item from '../Item/Item';
 
