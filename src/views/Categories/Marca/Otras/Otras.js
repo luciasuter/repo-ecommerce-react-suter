@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Item from '../../../../components/Item/Item';
-import '../../../../components/ItemListContainer/ItemList.css'
+import '../../../../components/TypeContainer/TypeContainer.css'
+import '../Marca.css'
 import MarcaNavbar from '../../../../components/MarcaNavbar/MarcaNavbar'
 
 // firebase
@@ -28,13 +29,15 @@ const Otras = () => {
   return (
     <>
       <MarcaNavbar/>
-        <div className='item-list-container'> 
+      <div className='marca_container'>
+        <div className='otras_container'> 
       {productsData.map((product) =>{
         return(
             <Item data={product} key={product.id}/>
         )
       })}
-    </div>
+        </div>
+      </div>
     </>
   )
 }

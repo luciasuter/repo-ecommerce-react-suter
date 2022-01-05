@@ -1,17 +1,3 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 /* reset*/
 * {
   padding: 0;
@@ -20,11 +6,21 @@ code {
   border: none;
   outline: none;
   list-style: none;
+  font-family: "Karla", sans-serif;
+}
+
+body #root {
+  font-family: "Karla", sans-serif;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+body,
+html {
+  background-color: rgb(245, 245, 245) !important;
 }
 
 /* reset */

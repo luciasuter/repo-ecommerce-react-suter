@@ -1,5 +1,7 @@
 import React from 'react'
 import './ItemDetail.css'
+import { List } from 'semantic-ui-react'
+
 
 import Counter from '../Counter/Counter'
 
@@ -25,12 +27,13 @@ const ItemDetail = ({data}) => {
     Item ={
         id: data.id,
         nombre: data.producto,
-        precio: data.precio
+        precio: data.precio,
+        z_img: data.imagen
     };
 
     return (
         
-        <div className={`item_id_${data.id} item_detail_container`}>
+        <div className={`item_id_${data.id} item_detail`}>
             
             <div className="img_container">
                 <div className="item_detail_img">
@@ -38,16 +41,18 @@ const ItemDetail = ({data}) => {
                 </div>
             </div>
             <div className="txt_container">
-                <h3 className="detail_titulo">{data.producto}</h3>        
-                <ul className="txt_detail">
-                    <li>producto: {data.tipo}</li>
-                    <li>marca: {data.marca}</li>
-                    <li>origen: {data.origen}</li>
-                </ul>
+                <h3 className="detail_titulo">{data.producto}</h3>
                 <div className="txt_btns">
                     <span className="detail_precio">${data.precio}</span>
                     <button className="btn_stock" disabled={valor}>{stock}</button>
                 </div>
+                    
+                <List bulleted horizontal>
+                    <List.Item>{data.marca}</List.Item>
+                    <List.Item>{data.tipo}</List.Item>
+                    <List.Item>{data.origen}</List.Item>
+                </List>
+                
                 <div className="counter_cont">
                     {data.stock === 0 ? null : <Counter stock={data.stock} initial="0"/>}
                     

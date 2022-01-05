@@ -1,0 +1,55 @@
+.CheckOut_form {
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+}
+
+.form_container {
+  padding: 1em;
+  background-color: rgb(255, 255, 255);
+}
+
+.input_container,
+.input_container_final {
+  margin: 0.6em 0.3em 0.6em 0.3em;
+}
+
+.input_container_final {
+  display: flex;
+  flex-direction: column;
+}
+
+.input_container .input_container_label {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.product_container {
+  padding: 1em;
+}
+
+.product_container h3,
+.form_container h3 {
+  margin: 0.5em;
+}
+
+.products {
+  width: 460px;
+  height: 220px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.total_container {
+  width: 400px;
+  display: flex;
+  padding: 0.5em;
+  justify-content: space-between;
+  margin: 0.5em;
+  background-color: white;
+}
+
+.total_number {
+  padding-left: 9em;
+  font-weight: 700;
+}

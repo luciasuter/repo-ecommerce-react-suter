@@ -2,8 +2,9 @@ import React, {useContext} from 'react'
 import './CartProduct.css'
 import { CartContext } from '../../CartContext'
 
+
 const CartProduct = ({data}) => {
-    const [cart, setCart,] = useContext(CartContext)
+    const [cart, setCart] = useContext(CartContext)
 
     const DeleteProduct = () =>{
         const NewCart = cart.filter(products => products.id !== data.id)
@@ -12,11 +13,12 @@ const CartProduct = ({data}) => {
     return (
         <div className={`Product_${data.id} cart_container`}>
             <ul>
-                <li>product name: {data.nombre}</li>
-                <li>product price x 1: ${data.precio_unidad}</li>
-                <li>product quantity: {data.cant}</li>
-                <li><button onClick={() => DeleteProduct()}>borrar producto</button></li>
+                <li className='cart_item_name'>{data.nombre}</li>
+                <li className='cart_item'>{data.cant}</li>
+                <li className='cart_item'>${data.precio_unidad}</li>
+                <li className='cart_item'>${data.cant * data.precio_unidad} </li>
             </ul>
+            <button className='cart_remover_btn' onClick={() => DeleteProduct()}>remover </button>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-.item-list-container {
+.item-list-containers {
   margin: 0.3em 5em 0 5em;
   padding: 2em;
   display: grid;
@@ -7,5 +7,4 @@
   grid-gap: 1em;
   align-items: center;
   justify-content: center;
-  background-color: rgb(216, 216, 216);
 }

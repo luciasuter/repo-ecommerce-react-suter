@@ -33,7 +33,7 @@ const ItemListContainer = () => {
   }, [])
   
   return (
-    <div className='item-list-container'>
+    <div className='item-list-containers'>
       {isLoading ? <Loading/> : productsData.map((product) =>{
         return(
             <Item data={product} key={product.id}/>

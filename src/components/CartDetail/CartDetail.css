@@ -1,0 +1,96 @@
+.CartDetail {
+  margin-top: 5em;
+  position: fixed;
+  padding: 2em;
+  display: grid;
+}
+
+.cart_txt,
+.pay_btns {
+  display: grid;
+  width: 300px;
+}
+
+.cart_txt {
+  justify-self: left;
+  justify-items: left;
+}
+
+.cart_txt h3 {
+  margin-bottom: 0;
+}
+
+.cart_product_container {
+  height: 305px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.product_titles ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 600px;
+  margin-bottom: 0.5em;
+}
+
+.product_titles ul .producto {
+  margin-right: 12rem;
+}
+
+.pay_btns {
+  justify-self: right;
+  justify-items: right;
+  height: auto;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+.pay_txt {
+  display: flex;
+  flex-direction: row;
+  width: 192.5px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total_txt {
+  display: flex;
+  flex-direction: column;
+}
+
+.total_txt .total,
+.total_products {
+  font-size: 0.9rem;
+}
+
+.total_price {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.purchase_btn,
+.cart_remover_btn,
+#btn_comprar,
+.btn_volver {
+  color: rgb(253, 253, 253);
+  background-color: rgba(27, 28, 29);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.purchase_btn,
+#btn_comprar,
+.btn_volver {
+  margin-top: 1em;
+  padding: 0.9em 4em 0.9em 4em;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.purchase_btn:hover,
+.cart_remover_btn:hover,
+#btn_comprar:hover,
+.btn_volver:hover {
+  background-color: rgb(253, 253, 253);
+  color: rgba(27, 28, 29);
+}

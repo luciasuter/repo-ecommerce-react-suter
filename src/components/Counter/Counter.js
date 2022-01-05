@@ -1,15 +1,29 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext} from 'react'
 import "./Counter.css";
-
+import {MdArrowDropDown, MdArrowDropUp} from 'react-icons/md'
+import {Popup } from 'semantic-ui-react'
 import { Link } from "react-router-dom";
 import {CartContext} from '../../CartContext'
 import {Item} from '../ItemDetail/ItemDetail'
+
 export let AddItem;
 
+
  function Counter ({stock, initial, onAdd}){
+
+    const [eventsEnabled] = React.useState(true)
+    const [open, setOpen] = React.useState(false)
+    const [,, AddProduct] = useContext(CartContext)
+
     let [cantidad, setCantidad] = useState(parseInt(initial));
     let [agregados, setAgregados] = useState(0)
-    const [cart, setCart, AddProduct] = useContext(CartContext)
+
+
+
+    setTimeout(() => {
+      setOpen(false)
+    }, 3000)
+
     
     
     function Sumar (){
@@ -46,7 +60,7 @@ export let AddItem;
       /*AGREGO ARTICULOS*/
       if (parseInt(onAdd) <= parseInt(stock)){
         document.getElementById("btn_agregar").disabled = false;
-        AddProduct(Item.id, Item.nombre, Item.precio, cantidad, (Item.precio * cantidad))
+        AddProduct(Item.id, Item.nombre, Item.precio, cantidad, (Item.precio * cantidad), Item.z_img)
       }
 
       if (parseInt(onAdd) === parseInt(stock)){
@@ -69,27 +83,39 @@ export let AddItem;
 
     return (
         <div className="Counter">
-          <div className="container_counter">
-            <button id="btn_sumar" onClick={Sumar}>+</button>
-            <div className="container_cantidad">
-              <span className="cantidad">{cantidad}</span>
+
+          <div className='add_btns'>
+            <div className="container_counter">
+                <span className="cantidad">{cantidad}</span>
+                <div className='arrow_btns'>
+                  <button id="btn_sumar" onClick={Sumar}><MdArrowDropUp/></button>
+                  <button id="btn_restar" onClick={Restar}><MdArrowDropDown/></button>
+                </div>
             </div>
-            <button id="btn_restar" onClick={Restar}>-</button>
+            <Popup
+          eventsEnabled={eventsEnabled}
+          on='click'
+          onClose={() => setOpen(false)}
+          onOpen={() => setOpen(true)}
+          open={open}
+          trigger={<button id="btn_agregar" onClick={agregarArticulos}>agregar al carrito</button>}>agregaste {cantidad} productos nuevos a tu carrito!</Popup>
+            
           </div>
-          <button id="btn_agregar" onClick={agregarArticulos}>agregar</button>
-          <div className="container_counter_txt">
-          <span>cantidad agregada: {agregados}</span> 
-          <span>stock: {stock}</span>
 
           <div className="btns_bottom">
-            {stock === 0 || agregados <= 0 ? null : <Link to="/Cart"><button id="btn_terminar">terminar compra</button></Link>}
+          
+            {stock === 0 || agregados <= 0 ? null :  <Link to="/Cart"><button id="btn_terminar">terminar compra</button></Link>}
             <Link to="/Catalogo"><button id="btn_counter_volver">volver al catalogo</button></Link>
+
           </div>
           
           </div>
-        </div>
     )
 }
 
 export default Counter;
+
+/*          <span>cantidad agregada: {agregados}</span> 
+          <span>stock: {stock}</span>*/
+
 

@@ -1,108 +1,82 @@
-/*.Counter {
-  width: inherit;
-  height: auto;
-  padding: 0.5em;
+.Counter {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  text-align: flex;
+  justify-content: flex-start;
 }
 
-.Counter h4 {
-  font-size: 1.2rem;
+.add_btns {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem 0 2rem 0;
 }
 
-.Counter span {
-  font-size: 0.7rem;
-  line-height: 1;
-  padding-bottom: 1rem;
+.Counter span,
+#btn_agregar {
+  font-size: 0.9rem;
+}
+
+#btn_sumar,
+#btn_restar,
+.container_counter {
+  background-color: rgb(253, 253, 253);
 }
 
 .container_counter {
-  width: inherit;
+  width: 80px;
+  height: 2.7rem;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  margin-right: 0.2rem;
 }
 
-.cantidad,
-.btn_restar,
-.btn_sumar {
-  height: 50px;
+#btn_agregar {
+  padding: 0 0.9em 0 0.9em;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgb(253, 253, 253);
+  background-color: rgba(27, 28, 29);
+  transition: background-color 0.2s ease-in-out;
 }
 
-.btn_restar,
-.btn_sumar {
-  width: 50px;
+#btn_agregar:disabled {
+  color: rgb(168, 168, 168);
+  background-color: rgb(221, 221, 221);
+}
+
+.arrow_btns {
+  display: flex;
+  flex-direction: column;
 }
 
 .cantidad {
-  width: 50%;
-  text-align: center;
-}
-*/
-
-.Counter {
-  width: 280px;
-  margin: 1em 1em 1em 0;
-  background-color: rgb(241, 241, 241);
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+  padding-right: 2rem;
 }
 
-.Counter span {
-  font-size: 0.8rem;
-}
-
-.container_counter {
-  width: inherit;
-  height: auto;
+.btns_bottom {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-bottom: 0.5rem;
-}
-
-#btn_restar,
-#btn_sumar {
-  width: 2rem;
-  height: 2rem;
-}
-#btn_restar,
-#btn_sumar,
-#btn_agregar,
-#btn_terminar,
-#btn_counter_volver {
-  background-color: rgb(166, 224, 228);
-  color: white;
-}
-
-#btn_restar:disabled,
-#btn_sumar:disabled,
-#btn_agregar:disabled {
-  background-color: rgb(191, 216, 218);
-}
-
-#btn_agregar,
-#btn_terminar,
-#btn_counter_volver {
-  height: 2.5rem;
 }
 
 #btn_terminar,
-#btn_counter_volver {
-  margin-top: 0.2em;
+#btn_counter_volver,
+.btn_carrito {
+  border-radius: 30px;
+  padding: 0.9em 0.3em 0.9em 0.3em;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgb(253, 253, 253);
+  background-color: rgba(27, 28, 29);
+  margin: 0 0.3em 0 0.3em;
+  transition: background-color 0.2s ease-in-out;
 }
 
-.container_cantidad {
-  width: 14rem;
-  height: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(252, 252, 252);
-}
-
-.container_counter_txt {
-  margin-top: 0.5em;
-  display: flex;
-  flex-direction: column;
+#btn_terminar:hover,
+#btn_counter_volver:hover,
+.btn_carrito:hover {
+  background-color: rgb(253, 253, 253);
+  color: rgba(27, 28, 29);
 }

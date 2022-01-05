@@ -1,17 +1,20 @@
-import React, {useContext} from 'react'
+import React, {Fragment} from 'react'
 import './PurchasedProducts.css'
-import { CartContext } from '../../CartContext'
 
 const PurchasedProducts = ({data}) => {
-    const [cart, setCart,] = useContext(CartContext)
+
 
     return (
-        <div className={`Product_${data.id} PurchasedProducts`}>
-            <ul>
-                <li>product name: {data.nombre}</li>
-                <li>product quantity: {data.cant}</li>
-            </ul>
-        </div>
+        <Fragment>
+            <div className={`Product_${data.id} PurchasedProducts`}>  
+                    <div className='purchased_img'><img src={`${data.z_img}`} alt={`imagen-producto-${data.id}`}/></div>
+                    <ul>
+                        <li className='purchased_name'>{data.nombre} </li>
+                        <li className='purchased_qty'>Cant:  {data.cant}</li>
+                    </ul> 
+                    <span className='purchased_price'>${data.cant * data.precio_unidad}</span>    
+            </div>
+        </Fragment>
     )
 }
 

@@ -1,23 +1,36 @@
 .cart-icon {
-  color: rgb(197, 197, 233);
+  color: rgb(44, 44, 44);
   font-size: 1.8rem;
   display: flex;
   justify-content: center;
+  background-color: rgb(231, 230, 230);
+  border-radius: 50%;
+  padding: 0.2em;
 }
 
 .counter {
   position: absolute;
-  font-size: 1.2rem;
+  font-size: 0.6rem;
+  height: 23px;
+  width: 23px;
+  text-align: center;
   font-weight: 700;
-  color: rgb(0, 0, 0);
+  top: 2px;
+  left: 38px;
+  color: rgb(241, 241, 241);
+  background-color: rgb(218, 47, 47);
+  padding: 0.5rem;
+  border-radius: 50%;
 }
 
 .cart-icon:hover {
-  color: chocolate;
-  text-shadow: 1px 1px 4px rgba(128, 117, 93, 0.384);
+  color: rgb(0, 0, 0);
+  background-color: rgb(218, 47, 47);
   transition-duration: 200ms;
 }
 
 .counter:hover {
-  color: rgb(85, 163, 7);
+  color: rgb(24, 23, 23);
+  background-color: rgb(231, 230, 230);
+  text-shadow: 1px 1px 4px rgba(71, 71, 71, 0.384);
 }

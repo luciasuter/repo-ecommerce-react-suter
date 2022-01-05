@@ -14,13 +14,10 @@ const ItemDetailContainer = () => {
     const [itemData, setItemData] = useState([])
 
     let paramsID = useParams()
-    console.log(itemData)
     const ItemDataFilter = itemData.filter((product) => {
       return product.id === paramsID.id})
-      console.log(ItemDataFilter)
 
     useEffect(() => {
-      console.log(paramsID)
       const getItem = async () =>{
         const q = query(collection(db, "catalogo"));
         const docs = []
@@ -51,8 +48,3 @@ const ItemDetailContainer = () => {
 
 export default ItemDetailContainer
 
-
-/*    
-
-      
-      */

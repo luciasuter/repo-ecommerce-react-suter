@@ -1,26 +1,20 @@
 .MarcaNavbar {
-  margin-top: 3em;
   margin-bottom: 1em;
-  background-color: rgb(64, 235, 101);
-  display: flex;
   position: sticky;
-  top: 90px;
+  top: 80px;
   z-index: 100;
-  width: 100%;
+  width: 100vw;
+  background-color: rgba(27, 28, 29);
+  box-shadow: 1px 1px 4px rgba(71, 71, 71, 0.219);
 }
 
-.MarcaNavbar ul {
+.segment_container {
+  padding: 0.5em 0.5em;
+  display: flex;
+  justify-content: center;
+}
+
+.menu_marca {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.Marca_title {
-  padding-right: 10rem;
-  padding-left: 5rem;
-}
-
-.Marca_link {
-  padding-right: 2rem;
-  padding-left: 2rem;
 }

@@ -1,0 +1,11 @@
+.type_container,
+.otras_container {
+  margin: 5.3em 5em 0 5em;
+  padding: 2em;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-areas: "one two three";
+  grid-gap: 1em;
+  align-items: center;
+  justify-content: center;
+}

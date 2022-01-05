@@ -1,27 +1,75 @@
-import React, {Fragment} from 'react'
+import React, {useState } from 'react'
+import { Menu, Header} from 'semantic-ui-react'
 import {Link} from 'react-router-dom'
 import './MarcaNavbar.css'
-
-const MarcaNavbar = () =>{
-    return(
-        <Fragment>
-        <div className='MarcaNavbar'>
-            <ul>
-                <li className='Marca_title'><b>filtrar por marca</b></li>
-                <Link to="/Marca/Copic" className="Marca_link">Copic</Link>
-                <Link to="/Marca/Moleskine" className="Marca_link">Moleskine</Link>
-                <Link to="/Marca/Winsor Newton" className="Marca_link">Winsor Newton</Link>
-                <Link to="/Marca/Kuretake" className="Marca_link">Kuretake</Link>
-                <Link to="/Marca/Pilot" className="Marca_link">Pilot</Link>
-                <Link to="/Marca/Uniball" className="Marca_link">Uniball</Link>
-                <Link to="/Marca/Otras" className="Marca_link">Otras</Link>
+import ProductDropdown from '../ProductDropdown/ProductDropdown'
 
 
-            </ul> 
-        </div>
-        </Fragment>
-    );
-};
+const MarcaNavbar = () => {
 
+    const [state, setState] = useState('home')
+
+    const handleItemClick = ({ name }) => setState(name)
+    return (
+      <div className='MarcaNavbar'>
+      <div className='segment_container'>
+          
+        <Menu inverted secondary className='marcaNavbar'>
+
+        <Link to="/Marca/Copic">
+            <Menu.Item
+                name='Copic'
+                active={state === 'Copic'}
+                onClick={handleItemClick}
+            />
+        </Link>
+        <Link to="/Marca/Moleskine">
+            <Menu.Item
+                name='Moleskine'
+                active={state === 'Moleskine'}
+                onClick={handleItemClick}
+            />
+        </Link>
+        <Link to="/Marca/Winsor Newton">
+            <Menu.Item
+                name='Winsor Newton'
+                active={state === 'Winsor Newton'}
+                onClick={handleItemClick}
+            />
+        </Link>
+        <Link to="/Marca/Kuretake">
+            <Menu.Item
+                name='Kuretake'
+                active={state === 'Kuretake'}
+                onClick={handleItemClick}
+            />
+        </Link>
+        <Link to="/Marca/Pilot">
+            <Menu.Item
+                name='Pilot'
+                active={state === 'Pilot'}
+                onClick={handleItemClick}
+            />
+        </Link>
+        <Link to="/Marca/Uniball">
+            <Menu.Item
+                name='Uniball'
+                active={state === 'Uniball'}
+                onClick={handleItemClick}
+            />
+        </Link>
+        <Link to="/Marca/Otras">
+            <Menu.Item
+                name='Otras'
+                active={state === 'Otras'}
+                onClick={handleItemClick}
+            />
+        </Link>
+            <div> <ProductDropdown /></div>
+        </Menu>
+      </div>
+      </div>
+    )
+  }
 export default MarcaNavbar;
 

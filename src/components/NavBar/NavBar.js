@@ -1,43 +1,59 @@
-import React, {useContext} from 'react'
-import CartWidget from "../CartWidget/CartWidget";
-import "./NavBar.css";
-import {NavLink} from 'react-router-dom'
-import {FiPenTool} from 'react-icons/fi'
+import React, {useContext, useState} from 'react'
 import { CartContext } from "../../CartContext";
+import {NavLink} from 'react-router-dom'
+import { Menu, Segment } from 'semantic-ui-react'
+
+
+// CSS
+import "./NavBar.css";
+
+// Components
+import CartWidget from "../CartWidget/CartWidget";
+
 
 const NavBar = () => {
   const [cart] = useContext(CartContext)
-  return (
-    <nav className="NavBar">
+  const [state, setState] = useState('home')
 
-      <div className="container_titulo">
-      <FiPenTool size={20}/>
-        <NavLink to="/" className="titulo">Artistica Kunstler </NavLink>
-        
-        </div>
+  const handleItemClick = ({ name }) => setState(name)
 
-      <ul>
-      <li>
-          
-        </li>
-        <li>
-          <NavLink to="/" className="Link">Home</NavLink>
-        </li>
-        <li>
-          <NavLink to="/Catalogo" className="Link">Catalogo</NavLink>
-        </li>
-        <li>
-          <NavLink to="/Contacto" className="Link">Contacto</NavLink>
-        </li>
-        {cart.length === 0 ? null : <li><NavLink to="/Cart"><CartWidget /></NavLink></li>}
+    return (
+      <div className='NavBar'>
+        <Segment inverted>
+        <Menu inverted pointing secondary className='menu_links'>
+
+        <Menu.Item> <span className='navbar_title'>ARTISTICA KUNSTLER </span></Menu.Item>
+
+          <NavLink to="/">
+            <Menu.Item
+                name='home'
+                active={state === 'home'}
+                onClick={handleItemClick}
+            />
+          </NavLink>
+          <NavLink to="/Catalogo"> 
+            <Menu.Item
+              name='catalogo'
+              active={state === 'catalogo'}
+              onClick={handleItemClick}
+            />
+          </NavLink>
+          <NavLink to="/Contact">  
+            <Menu.Item
+              name='Contacto'
+              active={state === 'Contacto'}
+              onClick={handleItemClick}
+            />
+          </NavLink> 
+            <Menu.Item>
+          {cart.length === 0 ? null : <NavLink to="/Cart"><CartWidget /></NavLink>}
+          </Menu.Item>
         
-      </ul>
-      
-      
-    </nav>
-  );
-};
+        </Menu>
+      </Segment>
+      </div>
+    )
+}
+
 export default NavBar;
-
-
 

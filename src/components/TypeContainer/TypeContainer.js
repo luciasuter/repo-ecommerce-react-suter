@@ -1,6 +1,6 @@
 import React, { useEffect, useState, Fragment } from 'react';
 
-import './ItemList.css'
+import './TypeContainer.css'
 import {useParams } from "react-router-dom";
 
 // firebase
@@ -10,12 +10,8 @@ import { collection, query, where, getDocs } from "firebase/firestore";
 import Item from '../Item/Item';
 
 const TypeContainer = () => {
-  const [itemData, setItemData] = useState([])
-  const ParamsID = useParams()
 
-  const ItemDataFilter = itemData.filter((product) => {
-    return product.marca === ParamsID.marca})
-
+    const ParamsID = useParams()
     const [productsData, setProductsData] = useState([]);
     useEffect(()=>{
       const getProducts = async () => {
@@ -34,7 +30,7 @@ const TypeContainer = () => {
   
   return (
     <Fragment>
-        <div className='item-list-container'> 
+        <div className='type_container'> 
       {productsData.map((product) =>{
         return(
             <Item data={product} key={product.id}/>

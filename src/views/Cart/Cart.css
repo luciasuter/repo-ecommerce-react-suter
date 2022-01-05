@@ -1,4 +1,8 @@
-.Cart {
-  margin-top: 15em;
-  margin-left: 5em;
+.Cart,
+.CheckOut_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
 }

@@ -1,6 +1,29 @@
 .cart_container {
-  background-color: lightcyan;
-  margin: 1.2em;
-  border: 1px dotted black;
-  width: 400px;
+  background-color: rgb(255, 255, 255);
+  margin: 1.2em 0 1.2em 0;
+  padding: 0.8em 0 0.8em 0;
+  width: 600px;
+}
+
+.cart_container ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 600px;
+  padding-bottom: 0.5rem;
+}
+
+.cart_container ul .cart_item {
+  width: 50px;
+  font-weight: 600;
+}
+
+.cart_item_name {
+  width: 235px;
+  margin-right: 2rem;
+}
+.cart_remover_btn {
+  padding: 0.5em;
+  margin-left: 38px;
+  font-size: 0.6rem;
 }

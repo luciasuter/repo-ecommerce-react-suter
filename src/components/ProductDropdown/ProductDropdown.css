@@ -1,0 +1,4 @@
+.marcaNavbar .item,
+.marcaNavbar .item > a:not(.ui) {
+  color: rgb(26, 26, 26) !important;
+}
